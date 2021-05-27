@@ -6,7 +6,7 @@
             done: false,
         },
         {
-            content: "zjeść pierogi",
+            content: "test",
             done: true,
         },
     ];
@@ -57,7 +57,7 @@
         let htmlString = "";
         for (const task of tasks) {
             htmlString += `
-        <li
+        <li class="form flex_item"
         ${task.done ? "style=\"text-decoration: line-through\"" : ""}>
         <button class="js-done">done</button>
         ${task.content}
