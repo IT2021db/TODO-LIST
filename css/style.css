@@ -18,47 +18,60 @@ body {
     padding: 20px;
 }
 
-.form {
+.section {
     background-color: #fff;
-    margin: auto;
     max-width: 1200px;
     margin: 2px 0;
     padding: 10px;
+   
 }
-.form_header{
 
-}
+
+
+
 
 .form__field {
-    display: flex; 
-   align-items: center;
-   justify-content:space-between;
-    
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     /* width: 100%; */
     margin-right: 10px;
-    margin-top: 10px;
-    background-color: #4CAF50;
+    /* background-color: #4CAF50; */
+    flex-wrap: wrap;
+}
+
+.form__field--frame {
+    border: none;
+    margin-left: 10px;
+    max-width: 900px;
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 3px;
     
 }
 
 .form__button {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     background-color: teal;
     color: #fff;
     padding: 10px;
     border: none;
-    width: 25%;
+    
+    width: fit-content;
     margin: 10px;
-    float: right;
-    }
-.flex__item{
+    text-align: center;
+}
+
+.task__form {
+    background-color: #fff;
+    max-width: 1200px;
     margin: 2px 0;
+    padding: 10px;
 }
 
 .tasks__item {
-    background: #b8cfcf;
+    /* background: #b8cfcf; */
     display: grid;
     grid-template-columns: auto 1fr auto;
     /* grid-gap: 10px; */
@@ -67,7 +80,6 @@ body {
     /* list-style-type: none; */
     border-bottom: 2px solid #ddd;
     text-align: right;
-    
 }
 
 .tasks__item--done {
@@ -79,7 +91,6 @@ body {
     height: 30px;
     width: 30px;
     text-align: center;
-
 }
 
 .tasks__button--done {

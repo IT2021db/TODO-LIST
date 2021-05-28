@@ -6,7 +6,7 @@
             done: false,
         },
         {
-            content: "zjeść pirogi",
+            content: "zjeść pierogi",
             done: true,
         },
     ];
@@ -31,6 +31,7 @@
     const onFormSubmit = (event) => {
         event.preventDefault();
         const newTaskContent = document.querySelector(".js-newTask").value.trim();
+      
         if (newTaskContent === "") {
             return;
         }
@@ -66,7 +67,7 @@
         </div>
         <div>
         <button class="js-remove tasks__button tasks__button--remove">&#x1F5D1</button>
-       </div>
+       </span>
         </li>
         `;
         }
