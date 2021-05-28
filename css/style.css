@@ -21,23 +21,15 @@ body {
 .section {
     background-color: #fff;
     max-width: 1200px;
-    margin: 2px 0;
+    margin: 20px 0;
     padding: 10px;
-   
 }
 
-
-
-
-
 .form__field {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* width: 100%; */
-    margin-right: 10px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 10px;
     /* background-color: #4CAF50; */
-    flex-wrap: wrap;
 }
 
 .form__field--frame {
@@ -47,7 +39,6 @@ body {
     width: 100%;
     border: 2px solid #ddd;
     border-radius: 3px;
-    
 }
 
 .form__button {
@@ -57,7 +48,6 @@ body {
     color: #fff;
     padding: 10px;
     border: none;
-    
     width: fit-content;
     margin: 10px;
     text-align: center;
@@ -80,6 +70,13 @@ body {
     /* list-style-type: none; */
     border-bottom: 2px solid #ddd;
     text-align: right;
+}
+
+.tasks__itemList {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    padding: 10px;
+    
 }
 
 .tasks__item--done {

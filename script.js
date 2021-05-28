@@ -31,11 +31,12 @@
     const onFormSubmit = (event) => {
         event.preventDefault();
         const newTaskContent = document.querySelector(".js-newTask").value.trim();
-      
-        if (newTaskContent === "") {
-            return;
+        const newTaskElement = document.querySelector(".js-newTask");
+        if (newTaskContent !== "") {
+            addNewTask(newTaskContent);
+            newTaskElement.value = "";
         }
-        addNewTask(newTaskContent);
+        newTaskElement.focus();
     };
 
     const bindEvents = () => {
@@ -58,16 +59,23 @@
         let htmlString = "";
         for (const task of tasks) {
             htmlString += `
-        <li 
-        class="tasks__item ${task.done ? "tasks__item--done" : ""}">
-        <div>
-             <button class="js-done tasks__button tasks__button--done">${task.done ? "✓" : ""}</button>
-             
-        ${task.content} 
-        </div>
-        <div>
-        <button class="js-remove tasks__button tasks__button--remove">&#x1F5D1</button>
-       </span>
+        <li class="tasks__item" >
+        
+        
+       
+         <button class="js-done tasks__button tasks__button--done">
+         ${task.done ? "✓" : ""}
+         </button>
+         <span class="tasks__itemList
+         ${task.done ? "tasks__item--done" : ""}">
+         ${task.content} 
+        </span> 
+      
+        
+        <button class="js-remove tasks__button tasks__button--remove">
+        &#x1F5D1
+        </button>
+      
         </li>
         `;
         }
