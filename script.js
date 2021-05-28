@@ -6,7 +6,7 @@
             done: false,
         },
         {
-            content: "test",
+            content: "zjeść pirogi",
             done: true,
         },
     ];
@@ -57,12 +57,16 @@
         let htmlString = "";
         for (const task of tasks) {
             htmlString += `
-        <li class="form flex_item"
-        ${task.done ? "style=\"text-decoration: line-through\"" : ""}>
-        <button class="js-done">done</button>
-        ${task.content}
-        <button class="js-remove">usuń</button>
-        
+        <li 
+        class="tasks__item ${task.done ? "tasks__item--done" : ""}">
+        <div>
+             <button class="js-done tasks__button tasks__button--done">${task.done ? "✓" : ""}</button>
+             
+        ${task.content} 
+        </div>
+        <div>
+        <button class="js-remove tasks__button tasks__button--remove">&#x1F5D1</button>
+       </div>
         </li>
         `;
         }
